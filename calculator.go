@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-type calculator struct{}
+type Calculator struct{}
 
 func ReadFromConsole() string {
 	scanner := bufio.NewScanner(os.Stdin)
@@ -21,7 +21,7 @@ func convertStringToInt(stringNumber string) int {
 	return number
 }
 
-func (calculator) operate(input string, operator string) int {
+func (Calculator) Operate(input string, operator string) int {
 	operands := strings.Split(input, operator)
 	operand1 := convertStringToInt(operands[0])
 	operand2 := convertStringToInt(operands[1])
