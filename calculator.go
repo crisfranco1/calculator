@@ -10,7 +10,7 @@ import (
 
 type calculator struct{}
 
-func readFromConsole() string {
+func ReadFromConsole() string {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	return scanner.Text()
